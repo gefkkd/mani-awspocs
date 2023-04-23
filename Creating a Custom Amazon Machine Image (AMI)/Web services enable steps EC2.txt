@@ -1,0 +1,29 @@
+To create a custom Amazon Machine Image (AMI)
+
+Web services enable steps EC2 Custom image creation
+
+sudo yum install httpd -y
+sudo service httpd start
+sudo chkconfig httpd on
+sudo echo "wel come to EC2 Custom image concept"> /var/www/html/index.html
+
+sudo nano /var/www/html/index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to EC2 Custom image concept</title>
+	<style>
+		h1 {
+			color: red;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to EC2 Custom image concept</h1>
+</body>
+</html>
+
+ami-0a5edac884b33c847
