@@ -1,0 +1,7 @@
+To increase CPU load on an AWS Linux instance, you can follow these steps
+
+Login to amazon linux server
+
+sudo yum install stress
+
+stress --cpu 1 --timeout 500
