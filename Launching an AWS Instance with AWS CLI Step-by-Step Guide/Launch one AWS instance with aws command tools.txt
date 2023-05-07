@@ -1,0 +1,50 @@
+
+Use the aws ec2 run-instances command to launch an instance.
+
+Specify the Amazon Machine Image (AMI) ID of the operating system you want to use.
+Choose the instance type based on your needs.
+Specify the key pair name that you will use to connect to the instance.
+Choose the security group(s) you want to assign to the instance.
+Specify the subnet ID in which you want to launch the instance.
+Specify any additional parameters as needed, such as user data, IAM instance profile, etc.
+
+------------------------------------------------------------------------------------------
+
+first we have create ec2 instance.
+
+yum install python-pip awscli -y
+
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+aws configure
+
+to list all ami images
+
+aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs"
+
+image-id ami-0889a44b331db0194
+
+-----------------------------------------------
+
+Display your \keypairs
+
+aws ec2 describe-key-pairs
+
+key-name aws-lab
+-------------------------------------------------------
+subnet-id subnet-0f8b769209604cee3
+
+launch the instance:-
+
+aws ec2 run-instances --image-id ami-0889a44b331db0194 --count 1 --instance-type t2.micro --key-name aws-lab --subnet-id subnet-0f8b769209604cee3
+
+
+
+
+
+
+
+
+
+
