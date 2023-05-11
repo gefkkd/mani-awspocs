@@ -1,0 +1,23 @@
+sudo yum install amazon-efs-utils -y
+
+sudo mkdir /data
+
+df -h
+
+EC2 Security goup sg-06560f57c6564a603
+
+Network File System (NFS) is used by UNIX clients for file access. NFS uses port 2049.
+
+Availability zone
+Subnet
+
+IP address
+
+Security groups
+us-east-1a	subnet-0f8b769209604cee3	-	sg-05b88d03e927fbd63
+us-east-1b	subnet-0717504e2049f45c7	-	sg-05b88d03e927fbd63
+us-east-1c	subnet-091414b987186bf69	-	sg-05b88d03e927fbd63
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-011382d5acfcbb62a.efs.us-east-1.amazonaws.com:/ /data
+
+
